@@ -37,7 +37,7 @@ const SearchForm = () => {
     }, 300)
 
     return ()=> clearTimeout(delayDebounceFn)
-  },[search, router, searchParams])
+  },[search])
 
   return (
     <form className='flex justify-center w-full sm:-mt-10 mt-10 mx-auto sm:px-5'>

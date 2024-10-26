@@ -4,7 +4,7 @@ import React from 'react'
 
 const ListMenu = () => {
   return (
-    <ul className='flex items-center gap-3 max-md:hidden md:gap-10'>
+    <ul className='flex items-center gap-3  md:gap-10'>
       <li className='body-text text-gradient_blue-purple !font-bold'>
         <Link href="https://samson-portfolio-jet.vercel.app/" target="_blank">
           My Portfolio

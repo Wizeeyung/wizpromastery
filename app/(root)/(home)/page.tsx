@@ -66,8 +66,8 @@ const Page = async({searchParams}: HomeProps) => {
         ))}
 
 
-        {/* {resourcesPlaylist.map((items:any)=> ( */}
-          {/* <section key={items._id} className='flex-center mt-6 w-full flex-col sm:mt-20'>
+        {resourcesPlaylist.map((items:any)=> (
+          <section key={items._id} className='flex-center mt-6 w-full flex-col sm:mt-20'>
             <h1 className='heading3 self-start text-white-800'>
               {items.title}
             </h1>
@@ -87,7 +87,7 @@ const Page = async({searchParams}: HomeProps) => {
               
             </div>
           </section>
-        ))} */}
+        ))}
         
 
       </section>

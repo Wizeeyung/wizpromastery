@@ -12,7 +12,6 @@ const SearchForm = () => {
 
   const searchParams = useSearchParams();
   const router = useRouter();
-  const pathname = usePathname();
   
 
   //to delay search for small time so it can make request once instead of on any key stroke
@@ -38,7 +37,7 @@ const SearchForm = () => {
     }, 300)
 
     return ()=> clearTimeout(delayDebounceFn)
-  },[search])
+  },[search, router, searchParams])
 
   return (
     <form className='flex justify-center w-full sm:-mt-10 mt-10 mx-auto sm:px-5'>

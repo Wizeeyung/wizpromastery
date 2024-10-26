@@ -4,7 +4,7 @@ import ResourceCard from '@/components/ResourceCard'
 import SearchForm from '@/components/SearchForm'
 import { getResources, getResourcesPlaylist } from '@/sanity/actions'
 import React from 'react'
-import { lazy } from 'react'
+
 
 //means this page would be serverside updated every 15mins whenever you add a new resource to your sanity studio
 export const revalidate = 900;
@@ -54,7 +54,6 @@ const Page = async({searchParams}: HomeProps) => {
                 <ResourceCard 
                   key={resource._id}
                   title={resource.title}
-                  id={resource._id}
                   image={resource.image}
                   downloadNumber={resource.views}
                   downloadLink={resource.downloadLink}
@@ -80,7 +79,6 @@ const Page = async({searchParams}: HomeProps) => {
                     <ResourceCard 
                     key={item._id}
                     title={item.title}
-                    id={item._id}
                     image={item.image}
                     downloadNumber={item.views}
                     downloadLink={item.downloadLink}

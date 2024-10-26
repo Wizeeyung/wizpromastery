@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import HamburgMenu from './HamburgMenu'
+// import HamburgMenu from './HamburgMenu'
 import ListMenu from './ListMenu'
 
 const Navbar = () => {

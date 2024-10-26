@@ -12,7 +12,6 @@ import Image from 'next/image'
 
 interface ResourceCardProps{
   title: string,
-  id: string,
   image: string,
   downloadNumber: number,
   downloadLink: string
@@ -20,7 +19,6 @@ interface ResourceCardProps{
 
 const ResourceCard: React.FC<ResourceCardProps> = ({
   title,
-  id,
   image,
   downloadNumber,
   downloadLink

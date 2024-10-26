@@ -3,8 +3,7 @@
 import { formUrlQuery } from '@/sanity/utils';
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
-import React, { Suspense, useState } from 'react'
-import { FiltersLoading } from '@/app/(root)/(home)/loading';
+import React, { useState } from 'react'
 
 const links = ['all', 'Next 13', 'frontend', 'backend', 'fullstack']
 
@@ -47,12 +46,9 @@ const Filters = () => {
   return (
     <ul className='text-white body-text flex w-full justify-center py-10 gap-4 overflow-auto'>
       {links.map((link)=>(
-        <Suspense  key={link} fallback={<FiltersLoading />} >
-
-          <button key={link} onClick={()=>handleFilter(link)} className={`${active === link ? 'gradient_blue-purple': ''} whitespace-nowrap rounded-lg px-8 py-2.5 capitalize`}>
-            {link}
-          </button>
-        </Suspense>
+        <button key={link} onClick={()=>handleFilter(link)} className={`${active === link ? 'gradient_blue-purple': ''} whitespace-nowrap rounded-lg px-8 py-2.5 capitalize`}>
+          {link}
+        </button>
       ))}
     </ul>
   )

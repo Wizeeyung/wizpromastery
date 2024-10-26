@@ -39,7 +39,7 @@ const Page = async({searchParams}: HomeProps) => {
         <Filters />
 
 
-        {(searchParams?.query || searchParams?.category && (
+        {(searchParams?.query || searchParams?.category )&& (
           <section className='flex justify-center mt-6 w-full flex-col sm:mt-20'>
           <Header 
             query={searchParams?.query || ''}
@@ -63,7 +63,7 @@ const Page = async({searchParams}: HomeProps) => {
             }
           </div>
         </section>
-        ))}
+        )}
 
 
         {resourcesPlaylist.map((items:any)=> (
